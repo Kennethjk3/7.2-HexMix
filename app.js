@@ -14,9 +14,9 @@
       palette = document.createElement('div');
       palette.className = 'palette'
 
-      title = document.createElement('h3');
-      title.innerHTML = item.title
-      palette.appendChild(title);
+      keyword = document.createElement('h3');
+      keyword.innerHTML = item.keyword
+      palette.appendChild(keyword);
 
 
 
