@@ -12,11 +12,11 @@ h1 {
 h3 {
   color: #000;
   background-color: #fff;
+  text-transform: capitalize;
+
 }
 .palette{
   text-align: center;
-  text-decoration: underline;
-  text-transform: capitalize;
 }
 .dominant {
   display: inline-block;
