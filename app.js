@@ -8,16 +8,18 @@
 
   var handleResponse = function(e) {
     var items = JSON.parse(e.target.responseText);
+
     var ul = document.createElement('ul');
     ul.className = 'list--bare row';
-    var li, img, title;
-    items.forEach(function(item) {
-      li = document.createElement('li');
-      li.className = 'team';
+    var li, dominant, title;
 
-      img = document.createElement('img');
-      img.src = item.logo;
-      li.appendChild(img);
+    items.forEach(function(item) {
+      div = document.createElement('div');
+      div.className = 'palette';
+
+      color.dominant = document.createElement('dominant');
+      color.dominant.innerText = item.text;
+      li.appendChild(dominant);
 
       title = document.createElement('h3');
       title.innerText = item.name
@@ -28,5 +30,5 @@
     document.body.insertBefore(ul, document.body.childNodes[0]);
   };
 
-  getJSON('/teams.json', handleResponse);
+  getJSON('/palettes.json', handleResponse);
 })();
