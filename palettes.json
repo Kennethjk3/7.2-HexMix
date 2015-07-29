@@ -9,5 +9,6 @@
   { "title": "Call-to-Action", "keyword": "sporting", "colors": { "dominant": "#393939", "contrastingDominant": "#FF5A09", "subDominant": "#F3843E", "contrastingSubDominant": "#FF9900", "pop": "#6E6E6E" } },
   { "title": "Fem", "keyword": "entertainment", "colors": { "dominant": "#4D505B", "contrastingDominant": "#CF4858", "subDominant": "#16A79D", "contrastingSubDominant": "#80628B", "pop": "#F4AC42" } },
   { "title": "Boring", "keyword": "e-commerce", "colors": { "dominant": "#FFF2E7", "contrastingDominant": "#D0CABF", "subDominant": "#B9B1A8", "contrastingSubDominant": "#DE8642", "pop": "#4B4D52" } },
-  { "title": "Vibrant", "keyword": "blog", "colors": { "dominant": "#293E6A", "contrastingDominant": "#3B5998", "subDominant": "#639BF1", "contrastingSubDominant": "#77BA9B", "pop": "#B6A754" } }
+  { "title": "Vibrant", "keyword": "blog", "colors": { "dominant": "#293E6A", "contrastingDominant": "#3B5998", "subDominant": "#639BF1", "contrastingSubDominant": "#77BA9B", "pop": "#B6A754" } },
+  { "title": "Sexy", "keyword": "RoRo", "colors": { "dominant": "#0099FF", "contrastingDominant": "#0099FF", "subDominant": "#0099FF", "contrastingSubDominant": "#0099FF", "pop": "#0099FF" } }
 ]
