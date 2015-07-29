@@ -19,7 +19,6 @@
       palette.appendChild(keyword);
 
 
-
       dominant = document.createElement('div');
       dominant.className = "dominant";
       dominant.innerHTML = item.colors.dominant;
