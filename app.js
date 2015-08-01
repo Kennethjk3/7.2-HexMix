@@ -9,25 +9,51 @@
   var handleResponse = function(e) {
     var items = JSON.parse(e.target.responseText);
 
-    var ul = document.createElement('ul');
-    ul.className = 'list--bare row';
-    var li, dominant, title;
-
     items.forEach(function(item) {
-      div = document.createElement('div');
-      div.className = 'palette';
+      var dominant, contrastingDominant, subDominant, contrastingSubDominant, pop
+      palette = document.createElement('div');
+      palette.className = 'palette'
 
-      color.dominant = document.createElement('dominant');
-      color.dominant.innerText = item.text;
-      li.appendChild(dominant);
+      keyword = document.createElement('h3');
+      keyword.innerHTML = item.keyword
+      palette.appendChild(keyword);
 
-      title = document.createElement('h3');
-      title.innerText = item.name
-      li.appendChild(title);
 
-      ul.appendChild(li);
+      dominant = document.createElement('div');
+      dominant.className = "dominant";
+      dominant.innerHTML = item.colors.dominant;
+      dominant.style.backgroundColor = dominant.innerHTML
+
+      palette.appendChild(dominant);
+
+      contrastingDominant = document.createElement('div');
+      contrastingDominant.className = "contrastingDominant";
+      contrastingDominant.innerHTML = item.colors.contrastingDominant;
+      contrastingDominant.style.backgroundColor = contrastingDominant.innerHTML
+
+      palette.appendChild(contrastingDominant);
+
+      subDominant = document.createElement('div');
+      subDominant.className = "subDominant";
+      subDominant.innerHTML = item.colors.subDominant;
+      subDominant.style.backgroundColor = subDominant.innerHTML
+      palette.appendChild(subDominant);
+
+      contrastingSubDominant = document.createElement('div');
+      contrastingSubDominant.className = "contrastingSubDominant";
+      contrastingSubDominant.innerHTML = item.colors.contrastingSubDominant;
+      contrastingSubDominant.style.backgroundColor = contrastingSubDominant.innerHTML
+      palette.appendChild(contrastingSubDominant);
+
+      pop = document.createElement('div');
+      pop.className = "pop";
+      pop.innerHTML = item.colors.pop;
+      pop.style.backgroundColor = pop.innerHTML
+      palette.appendChild(pop);
+
+
+      document.body.appendChild(palette, document.body);
     });
-    document.body.insertBefore(ul, document.body.childNodes[0]);
   };
 
   getJSON('/palettes.json', handleResponse);
